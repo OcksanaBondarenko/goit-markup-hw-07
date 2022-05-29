@@ -60,7 +60,7 @@ address {
   color: #000000;
 }
 
-.logo-part {
+.logo__part {
   color: var(--accent-color);
 }
 
@@ -93,12 +93,12 @@ address {
   margin-bottom: 50px;
 }
 
-.social-list {
+.social {
   display: flex;
   justify-content: space-between;
 }
 
-.social-list-link {
+.social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,22 +110,18 @@ address {
   transition: var(--trasform-primary);
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
+.social__link:hover,
+.social__link:focus {
   fill: #FFFFFF;
   background-color: var(--accent-color);  
 }
 
-.clients-list {
-  display: flex;
-}
-
-.features-list-picture {
+.list-picture {
   display: flex;
   justify-content: space-between;
 }
 
-.features-picture-link {
+.list-picture__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +131,13 @@ address {
   fill: #212121;
 }
 
+.icon-img {
+  margin-bottom: 30px;
+}
+
+.clients-list {
+  display: flex;
+}
 /* ===== Header ===== */
 
 .header {
@@ -150,12 +153,12 @@ address {
   align-items: center;
 }
 
-.nav-list {
+.menu-list {
   display: flex;
   align-items: center;
 }
 
-.nav-list-item {
+.menu-list__item {
   position: relative;
 }
 
@@ -165,7 +168,7 @@ address {
 
 /* ===== Stripe ===== */
 
-.nav-list-item > .studio::after {
+.menu-list__item > .studio::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -176,7 +179,7 @@ address {
   margin-left: -49px;
 }
 
-.nav-list-item > .portfolio::after {
+.menu-list__item > .portfolio::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -189,7 +192,7 @@ address {
 
 /* ===== End Stripe ===== */
 
-.nav-list-link {
+.menu-list__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -198,8 +201,13 @@ address {
   transition: var(--trasform-primary);
 }
 
-.nav-list-item:not(:last-child) {
+.menu-list__item:not(:last-child) {
   margin-right: 50px;
+}
+
+.menu-list__link:hover,
+.menu-list__link:focus {
+  color: var(--accent-color);
 }
 
 .contacts {
@@ -209,11 +217,11 @@ address {
   margin-left: auto;
 }
 
-.contacts-item:first-child{
+.contacts__item:first-child{
   margin-right: 30px;
 }
 
-.contact-mail, .contact-number {
+.contacts__mail, .contacts__number {
   text-decoration: none;
   color: var(--second-text-color);
   font-weight: 500;
@@ -224,27 +232,7 @@ address {
   fill: var(--second-text-color);
 }
 
-.contacts-icon-email {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  transition: var(--trasform-primary);
-}
-
-.contacts-icon-tel {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  transform: var(--trasform-primary);
-}
-
-
-.nav-list-link:hover,
-.nav-list-link:focus {
-  color: var(--accent-color);
-}
-
-.contact-mail {
+.contacts__mail {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -255,7 +243,12 @@ address {
   transition: --trasform-primary;
 }
 
-.contact-number {
+.contacts__mail:hover,
+.contacts__mail:focus {
+  color: var(--accent-color);
+}
+
+.contacts__number {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -264,23 +257,34 @@ address {
   transition: var(--trasform-primary);
 }
 
-.contact-mail:hover,
-.contact-mail:focus {
+.contacts__number:hover,
+.contacts__number:focus {
   color: var(--accent-color);
 }
 
-.contact-mail:hover .contacts-icon-email,
-.contact-mail:focus .contacts-icon-email {
+.contacts__icon {
+  transition: var(--trasform-primary);
+}
+
+.email {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.contacts__mail:hover .contacts__icon,
+.contacts__mail:focus .contacts__icon {
   fill: var(--accent-color);
 }
 
-.contact-number:hover,
-.contact-number:focus {
-  color: var(--accent-color);
-}
-
-.contact-number:hover .contacts-icon-tel,
-.contact-number:focus .contacts-icon-tel {
+.contacts__number:hover .contacts__icon,
+.contacts__number:focus .contacts__icon {
   fill: var(--accent-color);
 }
 
@@ -352,7 +356,7 @@ address {
   margin-top: -30px;
 }
 
-.features-list-item {
+.features-list__item {
   flex-basis: calc((100%-120px)/4);
   margin-left: 30px;
   margin-top: 30px;
@@ -363,20 +367,17 @@ address {
   padding-bottom: 94px;
 }
 
-.about-us-list {
+.about-us__list {
   display: flex;
   justify-content: space-between;
 }
 
-.features-icon-img {
-  margin-bottom: 30px;
-}
 
-.about-us-list-item {
+.about-us__item {
   position: relative;
 }
 
-.about-us-box{
+.about-us__box{
   display: flex;
   width: 100%;
   height: 70px;
@@ -391,7 +392,7 @@ address {
 }
 
 
-.about-us-text{
+.about-us__text{
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -407,7 +408,37 @@ address {
   background: #F5F4FA;
 }
 
-.team-list-img-name {
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.team-list__item {
+  flex-basis: calc((100% - 120px) / 4);
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.caption {
+  box-sizing: border-box;
+  border: 1px solid #EEEEEE;
+  background-color: #FFFFFF;
+  /* material shadow v1 */
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  
+}
+
+.team-caption {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.caption__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -418,7 +449,7 @@ address {
   margin-bottom: 10px;
 }
 
-.team-list-img-profession {
+.caption__profession {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
@@ -429,31 +460,7 @@ address {
   margin-bottom: 16px;
 }
 
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
-}
 
-.team-list-item {
-  flex-basis: calc((100% - 120px) / 4);
-  margin-left: 30px;
-  margin-top: 30px;
-}
-
-.team-list-caption {
-  box-sizing: border-box;
-  border: 1px solid #EEEEEE;
-  background-color: #FFFFFF;
-  /* material shadow v1 */
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
-}
 
 /* ===== Clients ===== */
 
@@ -472,7 +479,7 @@ address {
   margin-top: -30px;
 }
 
-.clients-list-link {
+.clients-list__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -486,13 +493,13 @@ address {
   transition: var(--trasform-primary);
 }
 
-.clients-list-link:hover,
-.clients-list-link:focus {
+.clients-list__link:hover,
+.clients-list__link:focus {
   fill: var(--accent-color);
   border: 1px solid #2196F3;
   }
 
-.clients-list-item {
+.clients-list__item {
   flex-basis: calc((100% - 180px) / 6);
   margin-left: 30px;
   margin-top: 30px;
@@ -509,6 +516,14 @@ address {
   padding-bottom: 60px;
 }
 
+.footer-info{
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-container{
+  margin-right: 70px;
+}
 
 .footer-social-list {
   display: flex;
@@ -518,21 +533,20 @@ address {
   margin-top: 20px;
 }
 
-.logo-part-footer {
+.logo-part--white {
   color: var(--primary-text-color-theme-dark);
 }
 
-.address-contact-maps {
+.address-list__maps {
   display: block;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-dark);
-  margin-bottom: 9px;
 }
 
-.address-contact-mail {
+.address-list__mail {
   display: block;
   font-family: inherit;
   font-weight: normal;
@@ -540,11 +554,14 @@ address {
   line-height: 1.71;
   /* or 171% */
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.6); 
+}
+
+.footer--margin {
   margin-bottom: 9px;
 }
 
-.address-contact-number {
+.address-list__number {
   font-family: inherit;
   font-weight: normal;
   font-size: 14px;
@@ -553,15 +570,6 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 } 
-
-.footer-info{
-  display: flex;
-  align-items: baseline;
-}
-
-.footer-container{
-  margin-right: 70px;
-}
 
 .footer-tagline {
   color: var(--primary-text-color-theme-dark);
