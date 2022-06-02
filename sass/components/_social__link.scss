@@ -8,11 +8,8 @@
     border-radius: 50%;
     fill: #AFB1B8;
     transition: var(--trasform-primary);
-    
-}
-
-.social__link:hover,
-.social__link:focus {
-    fill: #FFFFFF;
-    background-color: var(--accent-color);
+    &:hover,&:focus {
+            fill: #FFFFFF;
+            background-color: var(--accent-color);
+        }
 }

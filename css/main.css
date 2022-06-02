@@ -1,4 +1,15 @@
-body {
+:root {
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "Raleway", sans-serif;
+  --primary-text-color-theme-dark: #ffffff;
+  --primary-text-color-theme-light: #212121;
+  --secondary-primary-text-color-theme-dark: #2f303a;
+  --secondary-primary-text-color-theme-light: #757575;
+  --accent-color: #2196f3;
+  --trasform-primary: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.body {
   font-family: var(--primary-font-family);
 }
 
@@ -112,10 +123,15 @@ address {
   transition: var(--trasform-primary);
 }
 
-.social__link:hover,
-.social__link:focus {
+.social__link:hover, .social__link:focus {
   fill: #FFFFFF;
   background-color: var(--accent-color);
+}
+
+.clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .list-picture {
@@ -141,16 +157,6 @@ address {
   height: 120px;
   background-color: #F5F4FA;
   fill: #212121;
-}
-
-.icon-img {
-  margin-bottom: 30px;
-}
-
-.clients-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .header {
@@ -222,13 +228,12 @@ address {
   transition: var(--trasform-primary);
 }
 
-.menu-list__item:not(:last-child) {
-  margin-right: 50px;
+.menu-list__link:hover, .menu-list__link:focus {
+  color: var(--accent-color);
 }
 
-.menu-list__link:hover,
-.menu-list__link:focus {
-  color: var(--accent-color);
+.menu-list__item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .contacts {
@@ -270,8 +275,7 @@ address {
   transition: --trasform-primary;
 }
 
-.contacts__mail:hover,
-.contacts__mail:focus {
+.contacts__mail:hover, .contacts__mail:focus {
   color: var(--accent-color);
 }
 
@@ -285,8 +289,7 @@ address {
   transition: var(--trasform-primary);
 }
 
-.contacts__number:hover,
-.contacts__number:focus {
+.contacts__number:hover, .contacts__number:focus {
   color: var(--accent-color);
 }
 
@@ -1191,43 +1194,5 @@ address {
 .contact-form-btn:focus {
   background-color: #188CE8;
   cursor: pointer;
-}
-
-:root {
-  --primary-font-family: "Roboto", sans-serif;
-  --secondary-font-family: "Raleway", sans-serif;
-  --primary-text-color-theme-dark: #ffffff;
-  --primary-text-color-theme-light: #212121;
-  --secondary-primary-text-color-theme-dark: #2f303a;
-  --secondary-primary-text-color-theme-light: #757575;
-  --accent-color: #2196f3;
-  --trasform-primary: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body {
-  font-family: var(--primary-font-family);
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-
-img {
-  display: block;
-}
-
-address {
-  font-style: normal;
 }
 /*# sourceMappingURL=main.css.map */
