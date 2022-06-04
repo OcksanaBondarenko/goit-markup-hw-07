@@ -30,11 +30,12 @@
     padding: 15px 16px;
     color: #FFFFFF;
     outline: none;
+    &:focus {
+        border-color: var(--accent-color);
+    }
 }
 
-.footer-form-input:focus {
-    border-color: var(--accent-color);
-}
+
 
 .footer-form-btn {
     border: 0;
@@ -54,19 +55,22 @@
     align-items: center;
     justify-content: center;
     align-content: space-around;
-}
 
-.footer-form-btn::after {
+    &::after {
     content: '';
     width: 24px;
     height: 24px;
     background-image: url('../images/icon_send.svg'); 
     margin-left: 10px;
-}
-
-
-.footer-form-btn:hover,
-.footer-form-btn:focus {
+    }
+    
+    &:hover,
+    &:focus {
     background-color: #188CE8;
     cursor: pointer;
+    }
 }
+
+
+
+

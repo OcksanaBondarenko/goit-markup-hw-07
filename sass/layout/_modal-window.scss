@@ -45,12 +45,14 @@
     cursor: pointer;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    fill: var(--accent-color);
+    }
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    fill: var(--accent-color);
-}
+
 
 /* ===== Contact form ===== */
 
@@ -101,21 +103,22 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact-form-input:focus, 
-.contact-form-input:hover {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus, 
+    &:hover {
     outline: none;
     border-color: var(--accent-color);
-}
+    }
 
-.contact-form-input:focus+.contact-form-icon {
+    &:focus+.contact-form-icon {
     fill: var(--accent-color);
-}
+    }
 
-.contact-form-input:hover+.contact-form-icon {
+    &:hover+.contact-form-icon {
     fill: var(--accent-color);
+    }
 }
 
 .contact-form-icon {
@@ -147,15 +150,12 @@
     letter-spacing: 0.01em;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-}
-
-.contact-form-textarea:focus {
+    &:focus {
     outline: none;
     border-color: var(--accent-color);
+    }
 
-}
-
-.contact-form-textarea::placeholder {
+    &::placeholder {
     color: rgba(117, 117, 117, 0.5);
     font-family: 'Roboto';
     font-style: normal;
@@ -163,6 +163,7 @@
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.01em;
+    }
 }
 
 .contact-form-checkbox {
@@ -170,15 +171,14 @@
     -moz-appearance: none;
     appearance: none;
     position: absolute;
-}
 
-.contact-form-checkbox:checked+.contact-form-checkbox-label::before {
+    &:checked+.contact-form-checkbox-label::before {
     background-image: url('../images/icon_check.svg');
     background-size: contain;
     background-origin: border-box;
     border: var(--accent-color);
     background-color: var(--accent-color);
-
+    }
 }
 
 .contact-form-checkbox-agreement {
@@ -196,13 +196,10 @@
     font-size: 14px;
     line-height: 24px;
     /* identical to box height, or 171% */
-
     letter-spacing: 0.03em;
-
     color: #757575;
-}
 
-.contact-form-checkbox-label::before {
+    &::before {
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -211,6 +208,7 @@
     cursor: pointer;
     content: '';
     margin-right: 10px;
+    }
 }
 
 .contact-form-btn {
@@ -238,11 +236,11 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    ;
-}
-
-.contact-form-btn:hover,
-.contact-form-btn:focus {
+    
+    &:hover,
+    &:focus {
     background-color: #188CE8;
     cursor: pointer;
+    }
 }
+

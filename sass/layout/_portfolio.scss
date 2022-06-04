@@ -15,14 +15,14 @@
     color: var(--primary-text-color-theme-light);
     padding: 6px 22px;
     transition: var(--trasform-primary);
-}
 
-.page-nav-button:hover,
-.page-nav-button:focus {
+    &:hover,
+    &:focus {
     background-color: var(--accent-color);
     cursor: pointer;
     color: var(--primary-text-color-theme-dark);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
 
 .examples-name {
@@ -63,7 +63,6 @@
     border: none;
 }
 
-
 .page-nav-list-item:not(:last-child) {
     margin-right: 8px;
 }
@@ -76,18 +75,24 @@
 }
 
 .examples-list-item {
-    flex-basis: calc((100% - 90px) / 3);
+    flex-basis: calc((1200px% - 90px) / 3);
     margin-left: 30px;
     margin-top: 30px;
 
     position: relative;
     transition-property: box-shadow;
     transition: var(--trasform-primary);
-}
 
-.examples-list-item:hover,
-.examples-list-item:focus {
+    &:hover,
+    &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .overlay,
+    &:focus .overlay {
+    transform: translateY(0%);
+    cursor: pointer;
+    }
 }
 
 .examples-list-caption {
@@ -96,6 +101,11 @@
     box-sizing: border-box;
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
+
+    &:hover,
+    &:focus {
+    cursor: pointer;
+    }
 }
 
 .examples-list-item-img-wrapper {
@@ -125,13 +135,3 @@
     transition: var(--trasform-primary);
 }
 
-.examples-list-item:hover .overlay,
-.examples-list-item:focus .overlay {
-    transform: translateY(0%);
-    cursor: pointer;
-}
-
-.examples-list-caption:hover,
-.examples-list-caption:focus {
-    cursor: pointer;
-}

@@ -190,6 +190,10 @@ address {
   position: relative;
 }
 
+.menu-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .navigation {
   margin-left: 90px;
 }
@@ -202,8 +206,8 @@ address {
   border-radius: 2px;
   background-color: #2196F3;
   position: absolute;
-  margin-top: 46px;
-  margin-left: -49px;
+  top: 46px;
+  left: 0px;
 }
 
 .menu-list__item > .portfolio::after {
@@ -230,10 +234,6 @@ address {
 
 .menu-list__link:hover, .menu-list__link:focus {
   color: var(--accent-color);
-}
-
-.menu-list__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contacts {
@@ -279,6 +279,11 @@ address {
   color: var(--accent-color);
 }
 
+.contacts__mail:hover .contacts__icon,
+.contacts__mail:focus .contacts__icon {
+  fill: var(--accent-color);
+}
+
 .contacts__number {
   font-weight: 500;
   font-size: 14px;
@@ -291,6 +296,11 @@ address {
 
 .contacts__number:hover, .contacts__number:focus {
   color: var(--accent-color);
+}
+
+.contacts__number:hover .contacts__icon,
+.contacts__number:focus .contacts__icon {
+  fill: var(--accent-color);
 }
 
 .contacts__icon {
@@ -308,16 +318,6 @@ address {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-}
-
-.contacts__mail:hover .contacts__icon,
-.contacts__mail:focus .contacts__icon {
-  fill: var(--accent-color);
-}
-
-.contacts__number:hover .contacts__icon,
-.contacts__number:focus .contacts__icon {
-  fill: var(--accent-color);
 }
 
 .section {
@@ -377,8 +377,7 @@ address {
   transition: var(--trasform-primary);
 }
 
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background-color: #188CE8;
   cursor: pointer;
 }
@@ -387,13 +386,14 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -30px;
-  margin-top: -30px;
 }
 
 .features-list__item {
-  -ms-flex-preferred-size: calc((100% - 120px) / 4);
-      flex-basis: calc((100% - 120px) / 4);
+  -ms-flex-preferred-size: calc 277.5px;
+      flex-basis: calc 277.5px;
+}
+
+.features-list__item:not(:first-child) {
   margin-left: 30px;
 }
 
@@ -547,15 +547,14 @@ address {
   transition: var(--trasform-primary);
 }
 
-.clients-list__link:hover,
-.clients-list__link:focus {
+.clients-list__link:hover, .clients-list__link:focus {
   fill: var(--accent-color);
   border: 1px solid #2196F3;
 }
 
 .clients-list__item {
-  -ms-flex-preferred-size: calc((100% - 180px) / 6);
-      flex-basis: calc((100% - 180px) / 6);
+  -ms-flex-preferred-size: calc((1200px - 180px) / 6);
+      flex-basis: calc((1200px - 180px) / 6);
   margin-left: 30px;
   margin-top: 30px;
 }
@@ -664,8 +663,7 @@ address {
           transition-delay: 0;
 }
 
-.footer-social-list-link:hover,
-.footer-social-list-link:focus {
+.footer-social-list-link:hover, .footer-social-list-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -744,8 +742,7 @@ address {
   margin-left: 10px;
 }
 
-.footer-form-btn:hover,
-.footer-form-btn:focus {
+.footer-form-btn:hover, .footer-form-btn:focus {
   background-color: #188CE8;
   cursor: pointer;
 }
@@ -770,8 +767,7 @@ address {
   transition: var(--trasform-primary);
 }
 
-.page-nav-button:hover,
-.page-nav-button:focus {
+.page-nav-button:hover, .page-nav-button:focus {
   background-color: var(--accent-color);
   cursor: pointer;
   color: var(--primary-text-color-theme-dark);
@@ -840,8 +836,8 @@ address {
 }
 
 .examples-list-item {
-  -ms-flex-preferred-size: calc((100% - 90px) / 3);
-      flex-basis: calc((100% - 90px) / 3);
+  -ms-flex-preferred-size: calc((1200px% - 90px) / 3);
+      flex-basis: calc((1200px% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
   position: relative;
@@ -853,10 +849,16 @@ address {
   transition: var(--trasform-primary);
 }
 
-.examples-list-item:hover,
-.examples-list-item:focus {
+.examples-list-item:hover, .examples-list-item:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.examples-list-item:hover .overlay,
+.examples-list-item:focus .overlay {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  cursor: pointer;
 }
 
 .examples-list-caption {
@@ -866,6 +868,10 @@ address {
           box-sizing: border-box;
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
+}
+
+.examples-list-caption:hover, .examples-list-caption:focus {
+  cursor: pointer;
 }
 
 .examples-list-item-img-wrapper {
@@ -896,18 +902,6 @@ address {
           transform: translateY(100%);
   -webkit-transition: var(--trasform-primary);
   transition: var(--trasform-primary);
-}
-
-.examples-list-item:hover .overlay,
-.examples-list-item:focus .overlay {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  cursor: pointer;
-}
-
-.examples-list-caption:hover,
-.examples-list-caption:focus {
-  cursor: pointer;
 }
 
 .backdrop {
@@ -972,8 +966,7 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal-close-btn:hover, .modal-close-btn:focus {
   fill: var(--accent-color);
 }
 
@@ -1023,8 +1016,7 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-input:focus,
-.contact-form-input:hover {
+.contact-form-input:focus, .contact-form-input:hover {
   outline: none;
   border-color: var(--accent-color);
 }
@@ -1198,8 +1190,7 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-btn:hover,
-.contact-form-btn:focus {
+.contact-form-btn:hover, .contact-form-btn:focus {
   background-color: #188CE8;
   cursor: pointer;
 }

@@ -18,6 +18,9 @@
 
 .menu-list__item {
   position: relative;
+  &:not(:last-child) {
+  margin-right: 50px;
+  }
 }
 
 .navigation {
@@ -34,7 +37,7 @@
   background-color: #2196F3;
   position: absolute;
   top: 46px;
-  left: -49px;
+  left: 0px;
 }
 
 .menu-list__item > .portfolio::after {
@@ -62,9 +65,7 @@
     }
 }
 
-.menu-list__item:not(:last-child) {
-  margin-right: 50px;
-}
+
 
 .contacts {
   display: flex;
@@ -97,9 +98,15 @@
   margin-left: auto;
   margin-right: 50px;
   transition: --trasform-primary;
+
   &:hover,&:focus {
       color: var(--accent-color);
     }
+
+  &:hover .contacts__icon,
+  &:focus .contacts__icon {
+  fill: var(--accent-color);
+  }  
 }
 
 .contacts__number {
@@ -112,6 +119,11 @@
   &:hover,&:focus {
       color: var(--accent-color);
     }
+
+  &:hover .contacts__icon,
+  &:focus .contacts__icon {
+  fill: var(--accent-color);
+  }  
 }
 
 .contacts__icon {
@@ -128,16 +140,6 @@
   width: 10px;
   height: 16px;
   margin-right: 10px;
-}
-
-.contacts__mail:hover .contacts__icon,
-.contacts__mail:focus .contacts__icon {
-  fill: var(--accent-color);
-}
-
-.contacts__number:hover .contacts__icon,
-.contacts__number:focus .contacts__icon {
-  fill: var(--accent-color);
 }
 
 .section {
