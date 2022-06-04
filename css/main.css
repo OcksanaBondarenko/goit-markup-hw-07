@@ -9,7 +9,7 @@
   --trasform-primary: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.body {
+body {
   font-family: var(--primary-font-family);
 }
 
@@ -392,9 +392,12 @@ address {
 }
 
 .features-list__item {
-  -ms-flex-preferred-size: calc((100%-120px)/4);
-      flex-basis: calc((100%-120px)/4);
+  -ms-flex-preferred-size: calc((100% - 120px) / 4);
+      flex-basis: calc((100% - 120px) / 4);
   margin-left: 30px;
+}
+
+.features-list__tagline {
   margin-top: 30px;
 }
 
@@ -1020,12 +1023,17 @@ address {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-form-input:focus {
+.contact-form-input:focus,
+.contact-form-input:hover {
   outline: none;
   border-color: var(--accent-color);
 }
 
 .contact-form-input:focus + .contact-form-icon {
+  fill: var(--accent-color);
+}
+
+.contact-form-input:hover + .contact-form-icon {
   fill: var(--accent-color);
 }
 
