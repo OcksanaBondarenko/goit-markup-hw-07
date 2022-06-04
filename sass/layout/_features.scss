@@ -6,3 +6,7 @@
     flex-basis: calc ((100% - 90px) / 4);
     &:not(:first-child){margin-left: 30px;}
 }
+
+.features-list__tagline {
+    margin-top: 30px;
+}
