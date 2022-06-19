@@ -6,7 +6,7 @@
   border-bottom: 1px solid #EEEEEE;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
@@ -29,7 +29,7 @@
 
 /* ===== Stripe ===== */
 
-.menu-list__item > .studio::after {
+.menu-list__item > .menu-list__link__current::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -78,7 +78,7 @@
   margin-right: 30px;
 }
 
-.contacts__mail, .contacts__number {
+.contacts__link {
   text-decoration: none;
   color: var(--second-text-color);
   font-weight: 500;
@@ -87,9 +87,6 @@
   letter-spacing: 0.02em;
   display: flex;
   fill: var(--second-text-color);
-}
-
-.contacts__mail {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -109,36 +106,10 @@
   }  
 }
 
-.contacts__number {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: var(--secondary-primary-text-color-theme-light);
-  transition: var(--trasform-primary);
-  &:hover,&:focus {
-      color: var(--accent-color);
-    }
-
-  &:hover .contacts__icon,
-  &:focus .contacts__icon {
-  fill: var(--accent-color);
-  }  
-}
-
 .contacts__icon {
-  transition: var(--trasform-primary);
-}
-
-.email {
+  transition: var(--trasform-primary);  
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-}
-
-.tel {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
 }
 

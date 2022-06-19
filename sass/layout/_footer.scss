@@ -64,6 +64,12 @@
 
 .footer-tagline {
     color: var(--primary-text-color-theme-dark);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .footer-social-list-item:not(:last-child) {

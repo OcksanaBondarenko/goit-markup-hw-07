@@ -74,8 +74,8 @@
     margin-top: -30px;
 }
 
-.examples-list-item {
-    flex-basis: calc((1200px% - 90px) / 3);
+.examples-list-link {
+    flex-basis: calc((1200px - 90px) / 3);
     margin-left: 30px;
     margin-top: 30px;
 
@@ -87,13 +87,6 @@
     &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
-
-    &:hover .overlay,
-    &:focus .overlay {
-    transform: translateY(0%);
-    cursor: pointer;
-    }
-}
 
 .examples-list-caption {
     padding-top: 20px;
@@ -108,7 +101,7 @@
     }
 }
 
-.examples-list-item-img-wrapper {
+.examples-list-link-img-wrapper {
     position: relative;
     overflow: hidden;
 }
@@ -133,5 +126,10 @@
     overflow: auto;
     transform: translateY(100%);
     transition: var(--trasform-primary);
-}
 
+    &:hover .overlay,
+    &:focus .overlay {
+    transform: translateY(0%);
+    cursor: pointer;
+    }
+}

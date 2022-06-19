@@ -66,25 +66,6 @@ address {
   color: var(--accent-color);
 }
 
-.tagline {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--primary-text-color-theme-light);
-  margin-bottom: 10px;
-}
-
-.text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  /* or 171% */
-  letter-spacing: 0.03em;
-  color: var(--secondary-primary-text-color-theme-light);
-}
-
 .subtitle {
   font-weight: 700;
   font-size: 36px;
@@ -168,7 +149,7 @@ address {
   border-bottom: 1px solid #EEEEEE;
 }
 
-.header-container {
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,7 +180,7 @@ address {
 }
 
 /* ===== Stripe ===== */
-.menu-list__item > .studio::after {
+.menu-list__item > .menu-list__link__current::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -251,7 +232,7 @@ address {
   margin-right: 30px;
 }
 
-.contacts__mail, .contacts__number {
+.contacts__link {
   text-decoration: none;
   color: var(--second-text-color);
   font-weight: 500;
@@ -262,9 +243,6 @@ address {
   display: -ms-flexbox;
   display: flex;
   fill: var(--second-text-color);
-}
-
-.contacts__mail {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -275,48 +253,20 @@ address {
   transition: --trasform-primary;
 }
 
-.contacts__mail:hover, .contacts__mail:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
 
-.contacts__mail:hover .contacts__icon,
-.contacts__mail:focus .contacts__icon {
-  fill: var(--accent-color);
-}
-
-.contacts__number {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: var(--secondary-primary-text-color-theme-light);
-  -webkit-transition: var(--trasform-primary);
-  transition: var(--trasform-primary);
-}
-
-.contacts__number:hover, .contacts__number:focus {
-  color: var(--accent-color);
-}
-
-.contacts__number:hover .contacts__icon,
-.contacts__number:focus .contacts__icon {
+.contacts__link:hover .contacts__icon,
+.contacts__link:focus .contacts__icon {
   fill: var(--accent-color);
 }
 
 .contacts__icon {
   -webkit-transition: var(--trasform-primary);
   transition: var(--trasform-primary);
-}
-
-.email {
   width: 16px;
   height: 12px;
-  margin-right: 10px;
-}
-
-.tel {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
 }
 
@@ -333,14 +283,11 @@ address {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img.jpg");
   background-size: cover;
   background-color: #C4C4C4;
-}
-
-.hero-section {
   padding-top: 200px;
   padding-bottom: 210px;
 }
 
-.main-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -352,7 +299,7 @@ address {
   margin-bottom: 40px;
 }
 
-.button {
+.hero__button {
   min-width: 200px;
   padding: 10px 32px;
   border: 1px solid var(--accent-color);
@@ -377,7 +324,7 @@ address {
   transition: var(--trasform-primary);
 }
 
-.button:hover, .button:focus {
+.hero__button:hover, .hero__button:focus {
   background-color: #188CE8;
   cursor: pointer;
 }
@@ -397,8 +344,24 @@ address {
   margin-left: 30px;
 }
 
-.features-list__tagline {
+.features-list__title {
   margin-top: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color-theme-light);
+  margin-bottom: 10px;
+}
+
+.features-list__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  /* or 171% */
+  letter-spacing: 0.03em;
+  color: var(--secondary-primary-text-color-theme-light);
 }
 
 .about-us {
@@ -630,6 +593,12 @@ address {
 
 .footer-tagline {
   color: var(--primary-text-color-theme-dark);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .footer-social-list-item:not(:last-child) {
@@ -835,9 +804,9 @@ address {
   margin-top: -30px;
 }
 
-.examples-list-item {
-  -ms-flex-preferred-size: calc((1200px% - 90px) / 3);
-      flex-basis: calc((1200px% - 90px) / 3);
+.examples-list-link {
+  -ms-flex-preferred-size: calc((1200px - 90px) / 3);
+      flex-basis: calc((1200px - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
   position: relative;
@@ -849,13 +818,13 @@ address {
   transition: var(--trasform-primary);
 }
 
-.examples-list-item:hover, .examples-list-item:focus {
+.examples-list-link:hover, .examples-list-link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.examples-list-item:hover .overlay,
-.examples-list-item:focus .overlay {
+.examples-list-link:hover .overlay,
+.examples-list-link:focus .overlay {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
   cursor: pointer;
@@ -874,7 +843,7 @@ address {
   cursor: pointer;
 }
 
-.examples-list-item-img-wrapper {
+.examples-list-link-img-wrapper {
   position: relative;
   overflow: hidden;
 }

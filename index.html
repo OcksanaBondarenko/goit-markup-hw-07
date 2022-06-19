@@ -19,13 +19,13 @@
 <body>
 
     <header class="header">
-        <div class="container header-container">
+        <div class="container header__container">
             <a class="logo link" lang=en href=""><span class="logo__part">Web</span>Studio</a>
             <nav class="navigation">
                 <ul class="menu-list list">
 
                     <li class="menu-list__item">
-                        <a class="menu-list__link link studio" href="./index.html">Студия</a>
+                        <a class="menu-list__link link menu-list__link__current" href="./index.html">Студия</a>
                     </li>
 
                     <li class="menu-list__item">
@@ -42,8 +42,8 @@
                 <ul class="contacts list">
 
                     <li class="contacts__item link">
-                        <a class="contacts__mail link" href="mailto:info@devstudio.com">
-                            <svg class="contacts__icon email" widht="16" height="12">
+                        <a class="contacts__link link" href="mailto:info@devstudio.com">
+                            <svg class="contacts__icon" widht="16" height="12">
                                 <use href="./images/sprite.svg#envelope">
                                 </use>
                             </svg>
@@ -52,8 +52,8 @@
                     </li>
 
                     <li class="contacts__item link">
-                        <a class="contacts__number link" href="tel:+380961111111">
-                        <svg class="contacts__icon tel" widht="10" height="16">
+                        <a class="contacts__link link" href="tel:+380961111111">
+                        <svg class="contacts__icon" widht="10" height="16">
                             <use href="./images/sprite.svg#icon-mobile-phone"></use>
                         </svg>
                         +38 096 111 11 11</a>
@@ -64,13 +64,13 @@
     </header>
 
     <main>
-        <section class="hero hero-section">
+        <section class="hero">
             <div class="container">
-                <h1 class="main-title">Эффективные решения<br> для вашего бизнеса</h1>
-                <button class="button hero-button" type="button" data-modal-open>Заказать услугу</button>
+                <h1 class="hero__title">Эффективные решения<br> для вашего бизнеса</h1>
+                <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
-        <section class="features section">
+        <section class="section">
             <div class="container">
                 <ul class="list-picture list">
 
@@ -115,7 +115,8 @@
                 <ul class="features-list list">
 
                     <li class="features-list__item">
-                        <h3 class="features-list__tagline tagline">Внимание к деталям</h3>
+
+                        <h3 class="features-list__title">Внимание к деталям</h3>
                         <p class="features-list__text text">
                             Идейные соображения, а также начало 
                             повседневной работы по формированию позиции.
@@ -123,24 +124,24 @@
                     </li>
 
                     <li class="features-list__item">
-                        <h3 class="features-list__tagline tagline">Пунктуальность</h3>
-                        <p class="features-list__text text">
+                        <h3 class="features-list__title">Пунктуальность</h3>
+                        <p class="features-list__text">
                             Задача организации, в особенности же рамки и 
                             место обучения кадров влечет за собой.
                         </p>
                     </li>
 
                     <li class="features-list__item">
-                        <h3 class="features-list__tagline tagline">Планирование</h3>
-                        <p class="features-list__text text">
+                        <h3 class="features-list__title">Планирование</h3>
+                        <p class="features-list__text">
                             Равным образом консультация с широким активом 
                             в значительной степени обуславливает.
                         </p>
                     </li>
 
                     <li class="features-list__item">
-                        <h3 class="features-list__tagline tagline">Современные технологии</h3>
-                        <p class="features-list__text text">
+                        <h3 class="features-list__title">Современные технологии</h3>
+                        <p class="features-list__text">
                             Значимость этих проблем настолько очевидна, 
                             что реализация плановых заданий.
                         </p>
@@ -453,7 +454,7 @@
                 </address>
             </div>
             <div class="footer-social-info">
-                <h3 class="tagline footer-tagline">Присоединяйтесь</h3>
+                <h3 class="footer-tagline">Присоединяйтесь</h3>
                 <ul class="footer-social-list list">
 
                     <li class="footer-social-list-item">
